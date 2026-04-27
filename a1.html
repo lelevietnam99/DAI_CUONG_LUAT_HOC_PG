@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn thi Đại Cương Luật Học Phật Giáo</title>
+    <style>
+        :root {
+            --primary-color: #5D4037; /* Brown */
+            --secondary-color: #E65100; /* Saffron/Orange */
+            --bg-color: #F5F5F5;
+            --text-color: #333;
+            --card-bg: #FFFFFF;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: var(--card-bg);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+        .question-title {
+            background-color: #FFF3E0;
+            color: #D84315;
+            padding: 15px 20px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 4px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 8px;
+        }
+        h2::before {
+            content: '❖';
+            color: var(--secondary-color);
+            font-size: 1.2em;
+        }
+        .content-block {
+            background-color: #fafafa;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #D84315;
+            font-weight: bold;
+        }
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        .three-pillars {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .pillar-card {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            border-top: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease;
+        }
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+        .pillar-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .example-box {
+            background-color: #E8F5E9;
+            border-left: 5px solid #2E7D32;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .example-box h3 {
+            margin-top: 0;
+            color: #1B5E20;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1em;
+        }
+        .comment-box {
+            background-color: #E3F2FD;
+            border-left: 5px solid #1565C0;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .comment-box h3 {
+            margin-top: 0;
+            color: #0D47A1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1em;
+        }
+        .btn-print {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 20px auto;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .btn-print:hover {
+            background-color: #3E2723;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; margin: 0; }
+            .btn-print { display: none; }
+            .pillar-card { box-shadow: none; border: 1px solid #ccc; border-top: 4px solid var(--secondary-color); }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print" onclick="window.print()">🖨️ In Tài Liệu Ôn Tập</button>
+
+    <div class="container">
+        <h1>Ôn thi Đại Cương Luật Học Phật Giáo</h1>
+        
+        <div class="question-title">
+            Câu 1: Từ nguyên tắc "tùy phạm tùy chế", phân tích tính linh hoạt của giới luật.
+        </div>
+
+        <h2>1. Nguyên tắc "Tùy phạm tùy chế" là gì?</h2>
+        <div class="content-block">
+            <p><strong>"Tùy phạm tùy chế"</strong> có nghĩa là khi có người phạm lỗi thì Đức Phật mới bắt đầu chế định giới luật. Nếu không có ai phạm, Ngài sẽ không chế định trước. Đức Phật không tự nhiên ngồi suy nghĩ ra các giới điều để trói buộc đệ tử của mình.</p>
+            
+            <p><strong>Lý do của nguyên tắc này:</strong></p>
+            <ul>
+                <li>Nếu chế định trước khi có người phạm lỗi, ngoại đạo sẽ lấy đó làm cớ để chê cười (giống như việc người không có bệnh mà bắt uống thuốc).</li>
+                <li>Hàng đệ tử đang thanh tịnh sẽ sinh tâm bất mãn, cảm thấy bị gò bó một cách vô lý.</li>
+            </ul>
+
+            <p style="margin-top: 20px; font-weight: bold; color: var(--primary-color);">Nguyên tắc này được xây dựng dựa trên 3 yếu tố cốt lõi:</p>
+            <div class="three-pillars">
+                <div class="pillar-card">
+                    <h3>⏳ Hợp thời</h3>
+                    <p style="margin:0; text-align: justify; font-size: 0.95em;">Phù hợp với thời điểm và bối cảnh thời gian cụ thể lúc bấy giờ.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>🌱 Hợp cơ</h3>
+                    <p style="margin:0; text-align: justify; font-size: 0.95em;">Phù hợp với căn cơ của con người và dựa trên nguyên nhân/sự việc cụ thể đã xảy ra.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>🌍 Hợp xứ</h3>
+                    <p style="margin:0; text-align: justify; font-size: 0.95em;">Phù hợp với không gian, điều kiện sinh hoạt, phong tục tập quán và luật pháp của quốc gia sở tại.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>2. Phân tích tính linh hoạt của giới luật</h2>
+        <div class="content-block" style="background-color: transparent; border: none; padding: 0;">
+            <p style="text-align: justify;">Tính linh hoạt thể hiện ở việc giới luật đạo Phật <strong>không hề khô khan, cứng nhắc hay mang tính giáo điều</strong>. Ngược lại, giới luật luôn có những trường hợp được <span class="highlight">"khai mở" (không phạm)</span> tùy theo từng hoàn cảnh cụ thể.</p>
+
+            <div class="example-box">
+                <h3>📖 Ví dụ thực tiễn: Giới "Lìa y mà ngủ"</h3>
+                <p><em>(Thuộc nhóm Ni tát kỳ ba dật đề)</em></p>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Quy định ban đầu:</strong> Tỳ-kheo / Tỳ-kheo ni không được ngủ mà xả lìa 3 y.</li>
+                    <li><strong>Sự linh hoạt (Khai giới):</strong> Giới luật mở ra các trường hợp không phạm nếu người đó bị: bệnh tâm thần (cuồng si loạn tâm), bị cướp giật, hoặc đang đi trên đoạn đường thủy bộ đứt đoạn nguy hiểm.</li>
+                    <li><strong>Đặc biệt:</strong> Nếu Tỳ-kheo bị bệnh phải đi xa, cơ thể yếu không mang vác nặng được, chỉ cần được <strong>Tăng Yết-ma đồng ý</strong> thì việc ngủ lìa y cũng hoàn toàn không bị coi là phạm giới.</li>
+                </ul>
+            </div>
+
+            <div class="comment-box">
+                <h3>💡 Liên hệ và bình luận cá nhân</h3>
+                <p style="text-align: justify; margin-bottom: 10px;">Tính linh hoạt còn thể hiện sâu sắc qua việc giới luật đạo Phật <strong>luôn tham chiếu và tương thích với luật pháp hiện hành</strong> của quốc gia.</p>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Ví dụ:</strong> Việc xác định mức độ phạm tội "trộm cắp" (Ba-la-di). Thời xưa quy định là 5 tiền, nhưng ngày nay sẽ áp dụng thẳng theo luật pháp sở tại (ví dụ: lấy Luật pháp Việt Nam quy định trộm bao nhiêu tiền thì bị truy tố hình sự để làm căn cứ phân xử).</li>
+                    <li><strong>Kết luận:</strong> Chính nhờ tính linh hoạt và tùy duyên này mà giới luật Phật giáo luôn có sức sống mãnh liệt, <strong>tồn tại bất tử và không bao giờ bị lỗi thời</strong> qua hàng ngàn năm lịch sử.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

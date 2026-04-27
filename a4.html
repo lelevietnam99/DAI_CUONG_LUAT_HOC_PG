@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn thi Đại Cương Luật Học - Câu 4</title>
+    <style>
+        :root {
+            --primary-color: #5D4037; /* Brown */
+            --secondary-color: #E65100; /* Saffron/Orange */
+            --bg-color: #F5F5F5;
+            --text-color: #333;
+            --card-bg: #FFFFFF;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: var(--card-bg);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+        .question-title {
+            background-color: #FFF3E0;
+            color: #D84315;
+            padding: 15px 20px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 4px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .important-note {
+            background-color: #FFEBEE;
+            border: 1px solid #E53935;
+            padding: 12px 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            color: #C62828;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        /* Stages Styles */
+        .stage-card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .stage-card:hover {
+            transform: translateX(5px);
+            background: #fff9f5;
+        }
+        .stage-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.15em;
+            margin-bottom: 10px;
+        }
+        .stage-card p {
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* Elements Grid Styles */
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .element-item {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-top: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .element-item h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 1.15em;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+        .element-item p {
+            margin: 0;
+            text-align: justify;
+            font-size: 0.95em;
+        }
+
+        /* Teacher's Tip Box */
+        .teacher-tip {
+            background-color: #E8F5E9;
+            border: 2px dashed #2E7D32;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            position: relative;
+        }
+        .teacher-tip-title {
+            color: #1B5E20;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .teacher-tip ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #2E7D32;
+        }
+        .teacher-tip li {
+            margin-bottom: 8px;
+        }
+
+        .btn-print {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 20px auto;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .btn-print:hover {
+            background-color: #3E2723;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; margin: 0; }
+            .btn-print { display: none; }
+            .stage-card, .element-item { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print" onclick="window.print()">🖨️ In Tài Liệu Ôn Tập</button>
+
+    <div class="container">
+        <h1>Ôn thi Đại Cương Luật Học Phật Giáo</h1>
+        
+        <div class="question-title">
+            Câu 4: Trình bày các giai đoạn và yếu tố để thành tựu Yết-ma.
+        </div>
+
+        <div class="important-note">
+            ⚠️ CHÚ Ý: Tuyệt đối không ghi phần Già Yết-ma hay Phi tướng Yết-ma để tránh lạc đề và mất thời gian.
+        </div>
+
+        <h2>1. Ba giai đoạn của Yết-ma</h2>
+        
+        <div class="stage-card">
+            <h3>❶ Tiền phương tiện (Gia hành)</h3>
+            <p>Là các thủ tục chuẩn bị trước khi Yết-ma chính thức diễn ra. Bao gồm các việc: Tập Tăng (đánh chuông/kiểng), ổn định chỗ ngồi, kiểm chúng, hỏi các câu Vấn hòa <em>("Tăng đã nhóm chưa?", "Hòa hợp không?", "Người chưa thọ cụ túc ra chưa?")</em>. Đặc biệt phải xét xem Tỳ-kheo vắng mặt có "gửi dục và thanh tịnh" không, và cuối cùng hỏi rõ <em>"Tăng nay hòa hợp để làm gì?"</em>.</p>
+        </div>
+
+        <div class="stage-card">
+            <h3>❷ Căn bản Yết-ma (Tác pháp)</h3>
+            <p>Là quá trình thực hiện chính thức pháp Yết-ma. Tùy thuộc vào loại việc mà áp dụng phương thức cho đúng pháp: <strong>Đơn bạch</strong> (bạch 1 lần), <strong>Nhị bạch</strong> (1 lần bạch, 1 lần lấy ý kiến) hoặc <strong>Tứ bạch</strong> (1 lần bạch, 3 lần lấy ý kiến).</p>
+        </div>
+
+        <div class="stage-card">
+            <h3>❸ Hậu khởi Yết-ma</h3>
+            <p>Là những công việc bắt buộc phải thực hành sau khi Yết-ma đã thành tựu. <em>(Ví dụ: Yết-ma thuyết giới xong thì bắt buộc phải tụng giới, Yết-ma truyền giới xong thì phải dạy giới hạn cho giới tử)</em>. Nếu không có Hậu khởi, Yết-ma xem như bị thiếu sót.</p>
+        </div>
+
+        <h2>2. Bốn yếu tố (4 duyên) để thành tựu Yết-ma</h2>
+        
+        <div class="elements-grid">
+            <div class="element-item">
+                <h3>♦ Y xứ</h3>
+                <p>Là đối tượng hoặc mục đích chính của việc tiến hành Yết-ma. <em>(Ví dụ: Yết-ma để thọ giới, để kết giới, để cử tội...)</em>.</p>
+            </div>
+            
+            <div class="element-item">
+                <h3>♦ Cương giới (Giới trường)</h3>
+                <p>Là phạm vi không gian được kết giới rõ ràng để chư Tăng thực hiện Yết-ma. Mục đích là định hình khu vực giới hạn, đảm bảo <strong>tuyệt đối không cho người chưa thọ cụ túc giới bước vào xen lẫn</strong> khi Tăng đang làm việc.</p>
+            </div>
+
+            <div class="element-item">
+                <h3>♦ Túc số</h3>
+                <p>Là số lượng Tỳ-kheo thanh tịnh tối thiểu cần thiết để tiến hành Yết-ma hợp lệ. Tùy từng pháp mà yêu cầu túc số là 4 người, 5 người, 10 người. <strong>Lưu ý:</strong> Nếu có từ 20 vị Tỳ-kheo thanh tịnh trở lên thì có thể thực hiện được tất cả các loại pháp Yết-ma.</p>
+            </div>
+
+            <div class="element-item">
+                <h3>♦ Pháp thức</h3>
+                <p>Là quá trình diễn ra pháp Yết-ma phải tuân thủ đúng trình tự, mạch lạc, không được sai lệch. <em>(Ví dụ: Phải nêu giải trình nguyên nhân/đối tượng trước, sau đó mới hỏi xin ý kiến biểu quyết, tuyệt đối không làm ngược lại)</em>.</p>
+            </div>
+        </div>
+
+        <!-- Teacher's Tip Box -->
+        <div class="teacher-tip">
+            <div class="teacher-tip-title">💡 CHÌA KHÓA VÀNG TỪ GIẢNG SƯ (Mẹo 5 Điểm)</div>
+            <ul>
+                <li><strong>Bài sạch, chữ đẹp:</strong> Hãy viết chữ thật nắn nót, tuyệt đối không viết ngoáy "như bác sĩ viết toa thuốc". Viết ẩu sẽ bị đánh rớt.</li>
+                <li><strong>Trình bày rõ ràng:</strong> Luôn sử dụng gạch đầu dòng mạch lạc để chia ý (đúng như cấu trúc file này).</li>
+                <li><strong>Ghi nhớ:</strong> Đề thi 90 phút sẽ ra 2-3 câu trong số 4 câu ôn tập. Dù không thuộc lòng 100%, chỉ cần trình bày <strong>sạch đẹp và rõ ràng</strong>, Giảng sư sẽ ưu ái tặng ngay 5 điểm khuyến mãi để qua môn!</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
