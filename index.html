@@ -13,6 +13,7 @@
             --card-bg: #FFFFFF;
             --monk-color: #4E342E;
             --lay-color: #D84315;
+            --bonus-color: #D4AF37; /* Màu vàng kim cho nút bổ sung */
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -126,6 +127,33 @@
             line-height: 1.4;
         }
 
+        /* CSS cho nút bổ sung */
+        .bonus-section {
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .bonus-btn {
+            display: block;
+            background: linear-gradient(135deg, #FF9800, #E65100);
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 6px 15px rgba(230, 81, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid #FFF8E1;
+        }
+
+        .bonus-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(230, 81, 0, 0.4);
+            background: linear-gradient(135deg, #F57C00, #BF360C);
+        }
+
         .teacher-tip {
             background-color: #E8F5E9;
             border: 2px dashed #2E7D32;
@@ -169,7 +197,6 @@
         <div class="subtitle">Môn: Đại Cương Luật Học Phật Giáo (Trọn bộ 8 Câu hỏi)</div>
 
         <div class="layout-grid">
-            <!-- Cột Dành Cho Tăng Ni -->
             <div class="monk-section">
                 <div class="section-title">Phần Dành Cho Tăng Ni</div>
                 <div class="menu-list">
@@ -192,7 +219,6 @@
                 </div>
             </div>
 
-            <!-- Cột Dành Cho Cư Sĩ -->
             <div class="lay-section">
                 <div class="section-title">Phần Dành Cho Cư Sĩ</div>
                 <div class="menu-list">
@@ -216,6 +242,12 @@
             </div>
         </div>
 
+        <div class="bonus-section">
+            <a href="bs.html" class="bonus-btn" target="_blank">
+                🔥 6 Câu Ôn Bổ Sung Dựa Vào Bài Giảng Cuối Cùng Của Thầy
+            </a>
+        </div>
+
         <div class="teacher-tip">
             <div class="teacher-tip-title">💡 CHÌA KHÓA VÀNG TỪ GIẢNG SƯ (Mẹo 5 Điểm)</div>
             <ul>
@@ -226,7 +258,7 @@
         </div>
         
         <div class="footer">
-            Vui lòng lưu 8 file bài làm (a1.html đến b4.html) vào cùng một thư mục với file này. Click vào từng câu hỏi để xem đáp án chi tiết.
+            Vui lòng lưu các file HTML vào cùng một thư mục với file này. Click vào từng link để xem đáp án chi tiết.
         </div>
     </div>
 
