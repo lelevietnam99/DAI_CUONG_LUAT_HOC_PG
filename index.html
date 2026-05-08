@@ -3,264 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ Thống Ôn Thi Luật Học Phật Giáo</title>
+    <title>Đề Cương Ôn Thi: Giới Luật Đại Cương</title>
     <style>
         :root {
-            --primary-color: #5D4037; /* Brown */
-            --secondary-color: #E65100; /* Saffron/Orange */
-            --bg-color: #F5F5F5;
-            --text-color: #333;
+            --primary-color: #8B4513; /* Nâu trầm */
+            --secondary-color: #D4AF37; /* Vàng kim */
+            --bg-color: #FAFAF8;
+            --text-color: #333333;
+            --danger-color: #D32F2F;
             --card-bg: #FFFFFF;
-            --monk-color: #4E342E;
-            --lay-color: #D84315;
-            --bonus-color: #D4AF37; /* Màu vàng kim cho nút bổ sung */
+            --link-color: #0056b3;
         }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
+            line-height: 1.6;
             margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
+            padding: 20px;
         }
+
         .container {
-            max-width: 1000px;
-            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
             background: var(--card-bg);
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-top: 6px solid var(--secondary-color);
         }
+
         h1 {
+            text-align: center;
             color: var(--primary-color);
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 28px;
+            margin-bottom: 5px;
         }
+
         .subtitle {
-            color: #7f8c8d;
-            font-size: 1.1em;
+            text-align: center;
+            color: #666;
+            font-style: italic;
             margin-bottom: 40px;
             padding-bottom: 20px;
-            border-bottom: 2px solid var(--secondary-color);
-        }
-        
-        .layout-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
         }
 
-        @media (max-width: 768px) {
-            .layout-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .section-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 8px;
-            color: white;
-            text-transform: uppercase;
-        }
-
-        .monk-section .section-title {
-            background-color: var(--monk-color);
-        }
-
-        .lay-section .section-title {
-            background-color: var(--lay-color);
-        }
-        
-        .menu-list {
+        h2 {
+            color: var(--primary-color);
+            font-size: 22px;
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
         }
-        
-        .menu-item {
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            background: #fafafa;
-            border: 1px solid #eee;
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .alert-box {
+            background-color: #FFF3E0;
+            border-left: 5px solid #FF9800;
             padding: 20px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-            text-align: left;
-            border-left: 5px solid transparent;
+            border-radius: 6px;
+            margin-bottom: 30px;
         }
 
-        .monk-section .menu-item {
-            border-left-color: var(--monk-color);
-        }
-        .lay-section .menu-item {
-            border-left-color: var(--lay-color);
-        }
-        
-        .menu-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            background: #fff;
-        }
-        
-        .question-number {
-            font-size: 1.2em;
+        .alert-title {
+            color: #E65100;
             font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .monk-section .question-number { color: var(--monk-color); }
-        .lay-section .question-number { color: var(--lay-color); }
-        
-        .question-desc {
-            color: var(--text-color);
-            font-size: 1em;
-            line-height: 1.4;
-        }
-
-        /* CSS cho nút bổ sung */
-        .bonus-section {
-            margin-bottom: 40px;
-            padding: 0 20px;
-        }
-
-        .bonus-btn {
-            display: block;
-            background: linear-gradient(135deg, #FF9800, #E65100);
-            color: white;
-            text-decoration: none;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 1.4em;
-            font-weight: bold;
-            text-transform: uppercase;
-            box-shadow: 0 6px 15px rgba(230, 81, 0, 0.3);
-            transition: all 0.3s ease;
-            border: 2px solid #FFF8E1;
-        }
-
-        .bonus-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(230, 81, 0, 0.4);
-            background: linear-gradient(135deg, #F57C00, #BF360C);
-        }
-
-        .teacher-tip {
-            background-color: #E8F5E9;
-            border: 2px dashed #2E7D32;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: left;
-            margin-top: 20px;
-        }
-        .teacher-tip-title {
-            color: #1B5E20;
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 15px;
+            font-size: 18px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        .teacher-tip ul {
-            margin: 0;
+
+        ul {
             padding-left: 20px;
-            color: #2E7D32;
-            font-size: 1.05em;
-            line-height: 1.6;
         }
-        .teacher-tip li {
-            margin-bottom: 8px;
+
+        li {
+            margin-bottom: 12px;
         }
-        
-        .footer {
-            margin-top: 30px;
-            color: #95a5a6;
-            font-size: 0.9em;
+
+        .highlight {
+            font-weight: bold;
+            color: var(--danger-color);
+        }
+
+        .bold-text {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--bg-color);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quote-box {
+            background-color: #EFEBE9;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 50px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .quote-box p {
+            margin: 0;
             font-style: italic;
+            font-size: 16px;
+            color: #4E342E;
+        }
+
+        /* Styling cho các đường link câu hỏi */
+        .question-link {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .question-link:hover {
+            color: var(--danger-color);
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Tổng Hợp Tài Liệu Ôn Thi</h1>
-        <div class="subtitle">Môn: Đại Cương Luật Học Phật Giáo (Trọn bộ 8 Câu hỏi)</div>
+<div class="container">
+    <h1>NỘI DUNG ÔN TẬP: GIỚI LUẬT ĐẠI CƯƠNG</h1>
+    <div class="subtitle">Tóm tắt những lời căn dặn và hướng dẫn ôn thi cuối kỳ của Thầy giáo thọ</div>
 
-        <div class="layout-grid">
-            <div class="monk-section">
-                <div class="section-title">Phần Dành Cho Tăng Ni</div>
-                <div class="menu-list">
-                    <a href="a1.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 1</span>
-                        <span class="question-desc">Từ nguyên tắc "tùy phạm tùy chế", phân tích tính linh hoạt của giới luật.</span>
-                    </a>
-                    <a href="a2.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 2</span>
-                        <span class="question-desc">Trình bày khái quát nội dung bộ Tứ phần luật (Không ghi số trang).</span>
-                    </a>
-                    <a href="a3.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 3</span>
-                        <span class="question-desc">Trình bày đối tượng của Yết-ma (Nhân, Pháp, Sự theo Yết-ma yếu chỉ).</span>
-                    </a>
-                    <a href="a4.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 4</span>
-                        <span class="question-desc">Trình bày 3 giai đoạn và 4 yếu tố để thành tựu Yết-ma.</span>
-                    </a>
-                </div>
-            </div>
+    <div class="alert-box">
+        <div class="alert-title">⚠️ 1. QUY CHẾ VÀ CÁCH LÀM BÀI THI (CỰC KỲ QUAN TRỌNG)</div>
+        <ul>
+            <li><span class="bold-text">Cấu trúc đề:</span> Đề thi gồm 2 hoặc 3 câu hỏi. Thời gian làm bài: <span class="highlight">90 phút</span>.</li>
+            <li><span class="bold-text">Chữ viết:</span> Không cần đẹp nhưng <span class="highlight">bắt buộc phải rõ ràng, dễ đọc</span>. Tuyệt đối tránh viết như "toa thuốc bác sĩ" vì Thầy sẽ không thể chấm điểm.</li>
+            <li><span class="bold-text">Trọng tâm:</span> Nhớ bao nhiêu viết bấy nhiêu, bám sát nội dung. Không viết lan man, sai câu hỏi hay "thừa giấy vẽ voi".</li>
+            <li><span class="bold-text">Bố cục bài thi:</span>
+                <ul>
+                    <li><span class="bold-text">Lý thuyết học thuộc</span> (VD: liệt kê giới trọng): Viết trực tiếp, <em>không cần</em> mở bài, thân bài, kết luận.</li>
+                    <li><span class="bold-text">Phân tích, áp dụng thực tế</span> (VD: áp dụng tinh thần giới luật): <span class="highlight">Bắt buộc</span> phải có đủ 3 phần: Mở bài, Thân bài, Kết luận.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-            <div class="lay-section">
-                <div class="section-title">Phần Dành Cho Cư Sĩ</div>
-                <div class="menu-list">
-                    <a href="b1.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 1</span>
-                        <span class="question-desc">Phân tích mục đích Đức Phật chế giới (Theo 3 đối tượng và 1 mục đích tối thượng).</span>
-                    </a>
-                    <a href="b2.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 2</span>
-                        <span class="question-desc">Làm thế nào để tâm kiên cố hướng về đạo Bồ Đề? (4 pháp môn tu tập).</span>
-                    </a>
-                    <a href="b3.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 3</span>
-                        <span class="question-desc">Phân tích phẩm Nghiệp trong kinh Ưu Bà Tắc (3 Thân, 4 Khẩu, 3 Ý).</span>
-                    </a>
-                    <a href="b4.html" class="menu-item" target="_blank">
-                        <span class="question-number">Câu hỏi 4</span>
-                        <span class="question-desc">Trình bày nội dung của giới Bồ Tát (Tuyệt đối theo Tam tụ tịnh giới).</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <h2>📚 2. PHƯƠNG PHÁP ÔN TẬP HIỆU QUẢ</h2>
+    <ul>
+        <li>Tuyệt đối <strong>không học vẹt</strong> từng chữ do khối lượng kiến thức rất dài.</li>
+        <li><strong>Học theo phương pháp gạch đầu dòng</strong> (lập dàn ý) để nắm bắt sườn bài.</li>
+        <li><strong>Tự đặt câu hỏi</strong> để giải quyết vấn đề. <br>
+            <em>Ví dụ:</em> Thay vì học thuộc lòng đoạn văn dài, hãy tự hỏi: <em>"Có bao nhiêu đặc tính để cúng dường bố thí ba-la-mật?"</em> sau đó tự liệt kê các ý chính.</li>
+    </ul>
 
-        <div class="bonus-section">
-            <a href="bs.html" class="bonus-btn" target="_blank">
-                🔥 6 Câu Ôn Bổ Sung Dựa Vào Bài Giảng Cuối Cùng Của Thầy
-            </a>
-        </div>
-
-        <div class="teacher-tip">
-            <div class="teacher-tip-title">💡 CHÌA KHÓA VÀNG TỪ GIẢNG SƯ (Mẹo 5 Điểm)</div>
+    <h2>🎯 3. NỘI DUNG ÔN THI TRỌNG TÂM</h2>
+    <div class="grid-container">
+        
+        <div class="card full-width">
+            <h3>📖 3 Câu Hỏi Chung (Tăng Ni & Cư sĩ)</h3>
             <ul>
-                <li>Đề thi 90 phút sẽ ra ngẫu nhiên <strong>2 đến 3 câu</strong> trong số các câu ôn tập này.</li>
-                <li><strong>Nguyên tắc sống còn:</strong> "Bài sạch chữ đẹp, trình bày rõ ràng, gạch đầu dòng mạch lạc" sẽ được Thầy ưu ái tặng ngay 5 điểm khuyến mãi để qua môn.</li>
-                <li>Tuyệt đối <strong>không viết ngoáy chữ xấu</strong> (như bác sĩ viết toa thuốc) vì sẽ bị đánh rớt ngay lập tức!</li>
+                <li><strong><a href="bs1.html" class="question-link" target="_blank">Câu 1: Định nghĩa Giới luật Phật giáo:</a></strong> Trình bày đủ 3 khía cạnh: 
+                    (1) Ngữ nghĩa <em>(Sila)</em>, 
+                    (2) Nghĩa trong kinh A-hàm, 
+                    (3) Nghĩa theo Nam truyền Phật giáo <em>(tác phẩm Phân tích đạo/Thanh tịnh đạo luận)</em>.
+                </li>
+                <li><strong><a href="bs2.html" class="question-link" target="_blank">Câu 2: Tinh thần của giới luật:</a></strong> Trọng tâm là "Chỉ ác và hành thiện" (Dừng việc ác, làm việc lành). <strong>Lưu ý:</strong> Chỉ chọn phân tích 1 bài kệ Bồ tát <em>(VD: Chư ác mạc tác, chúng thiện phụng hành)</em>, tuyệt đối không liệt kê/phân tích dài dòng nhiều bài kệ.</li>
+                <li><strong><a href="bs3.html" class="question-link" target="_blank">Câu 3: Vai trò của giới luật trong lộ trình tu học:</a></strong> Phân tích dựa trên nền tảng <strong>10 điều lợi ích</strong> của việc chế giới. Từ đó làm nổi bật: Giữ giới -> phát sinh chánh Định -> trí Tuệ.</li>
             </ul>
         </div>
-        
-        <div class="footer">
-            Vui lòng lưu các file HTML vào cùng một thư mục với file này. Click vào từng link để xem đáp án chi tiết.
+
+        <div class="card">
+            <h3>🪷 Dành Riêng Cho Tăng Ni</h3>
+            <ul>
+                <li><strong><a href="bs4.html" class="question-link" target="_blank">Câu 4: Đối tượng của Yết-ma:</a></strong> Gồm 3 phần: <em>Nhân, Pháp, Sự</em>. Giải thích rõ từng yếu tố theo tác phẩm "Yết-ma yếu chỉ" (HT. Thích Trí Thủ). Nêu đúng kiến thức căn bản, không cần ví dụ dài dòng.</li>
+                <li><strong><a href="bs5.html" class="question-link" target="_blank">Câu 5: Các yếu tố thành tựu Yết-ma:</a></strong> Nắm vững 4 yếu tố: <em>Y xứ, Cương giới, Túc số, Pháp thức</em>.</li>
+                <li><strong><a href="bs6.html" class="question-link" target="_blank">Câu 6: Năm bộ Quảng luật (Đặc biệt: Tứ phần luật):</a></strong> Nắm kết cấu khái quát của 5 bộ <em>(VD: Từ quyển mấy đến quyển mấy nói nội dung gì)</em>. <span class="highlight">Không cần</span> nhớ số trang hay viết chữ Phạn/Pali. Nhấn mạnh bộ Tứ Phần vì áp dụng chính tại Việt Nam.</li>
+            </ul>
         </div>
+
+        <div class="card">
+            <h3>🙏 Dành Riêng Cho Cư Sĩ</h3>
+            <ul>
+                <li><strong>4. Nội dung của Bồ Tát giới:</strong> Không liệt kê giới điều. Bắt buộc phân tích <strong>Tam tụ tịnh giới</strong>: Nhiếp luật nghi giới, Nhiếp thiện pháp giới, Nhiêu ích hữu tình giới.</li>
+                <li><strong>5. 10 điều giới trọng (Kinh Phạm Võng):</strong> Nêu tên 10 giới và <strong>phải phân tích ngắn gọn</strong> ý nghĩa từng giới (Chỉ liệt kê tên sẽ mất 2/3 điểm). Không cần trình bày phần lịch sử phiên dịch/điều kiện thọ giới.</li>
+                <li><strong>6. Kinh Ưu-bà-tắc giới:</strong> Chỉ học <strong>7 phẩm</strong> liên quan Lục độ Ba-la-mật <em>(Phẩm: 18, 19, 23, 25, 26, 27, 28)</em>. Đặc biệt học thật kỹ <span class="highlight">Phẩm 18</span> (phẩm tổng quát nhất).</li>
+            </ul>
+        </div>
+
     </div>
+
+    <div class="quote-box">
+        <p><strong>💡 Lời dặn dò thêm của Thầy:</strong> "Việc học ở cấp bậc này đòi hỏi sự chủ động. Đừng chỉ tìm kiếm trên mạng hay web trường, mà phải chịu khó lên thư viện, ra nhà sách để tìm đọc tài liệu mở rộng. Chúc lớp thi tốt và hãy luôn giữ tâm xả bỏ, hoan hỷ để đời sống tu tập được an lạc."</p>
+    </div>
+
+</div>
 
 </body>
 </html>
